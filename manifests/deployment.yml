@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vistaarkpackaginganddelivery 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vistaarkpackaginganddelivery
+  template:
+    metadata:
+      labels:
+        app: vistaarkpackaginganddelivery 
+    spec:
+      containers:
+        - name: vistaarkpackaginganddelivery 
+          image: romfseacr.azurecr.io/vistaarkpackaginganddelivery
+          ports:
+          - containerPort: 80
